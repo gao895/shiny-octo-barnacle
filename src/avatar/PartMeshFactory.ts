@@ -48,6 +48,11 @@ export function buildPrimitiveMesh(
   if (node.shape === 'sphere' || node.shape === 'box') {
     mesh.scale.set(node.size[0], node.size[1], node.size[2]);
   }
+  // ExpressionController scales eye/mouth meshes for blend weights; it needs
+  // this original scale as its multiplier base rather than overwriting it
+  // outright, or it would blow a (0.03, 0.03, 0.012)-scaled eye sphere up to
+  // a literal 1-unit sphere and swallow the camera inside it.
+  mesh.userData.baseScale = mesh.scale.clone();
 
   mesh.position.set(...node.position);
   if (node.rotation) mesh.rotation.set(...node.rotation);

@@ -61,7 +61,7 @@ function attachPart(
   const meshes: THREE.Mesh[] = [];
 
   part.primitive.forEach((node, i) => {
-    const useColor = node.colorable && color ? color : part.defaultColor;
+    const useColor = node.color ?? (node.colorable && color ? color : part.defaultColor);
     const matKey = `${part.id}:${i}:${useColor}`;
     let material = materialRegistry.get(matKey);
     if (!material) {

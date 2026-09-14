@@ -28,6 +28,13 @@ export interface PrimitiveNode {
   size: [number, number, number];
   /** whether this node's color follows the part's `colorable` slot */
   colorable?: boolean;
+  /**
+   * Fixed color for this node regardless of `colorable`/slot color — for a
+   * detail that must stay a specific shade no matter what the user picks
+   * (e.g. the white of an eye, or its dark pupil, while the iris between
+   * them still follows the "eyes" color slot).
+   */
+  color?: string;
 }
 
 export type HumanoidAttachBone =
