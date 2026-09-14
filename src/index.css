@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  overscroll-behavior: none;
+}
+
+body {
+  background: linear-gradient(180deg, #fdf2fb 0%, #f3e8fd 100%);
+  color: #1c1230;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #eea0dc;
+  border-radius: 4px;
+}
+
+.panel-scroll {
+  scrollbar-width: thin;
+}

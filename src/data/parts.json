@@ -1,0 +1,2131 @@
+{
+  "body": [
+    {
+      "id": "body_01",
+      "name": "Standard Body",
+      "nameJa": "スタンダード",
+      "category": "body",
+      "primitive": [
+        {
+          "shape": "capsule",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            0.11,
+            0.16,
+            0
+          ],
+          "colorable": false
+        }
+      ],
+      "attachTo": "chest",
+      "defaultColor": "#ffe0bd",
+      "colorable": false,
+      "compatible": true,
+      "estimatedTriangles": 480,
+      "tags": [
+        "standard"
+      ]
+    },
+    {
+      "id": "body_02",
+      "name": "Slim Body",
+      "nameJa": "スリム",
+      "category": "body",
+      "primitive": [
+        {
+          "shape": "capsule",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            0.095,
+            0.16,
+            0
+          ],
+          "colorable": false
+        }
+      ],
+      "attachTo": "chest",
+      "defaultColor": "#ffe0bd",
+      "colorable": false,
+      "compatible": true,
+      "estimatedTriangles": 480,
+      "tags": [
+        "slim"
+      ]
+    },
+    {
+      "id": "body_03",
+      "name": "Round Body",
+      "nameJa": "ぽっちゃり",
+      "category": "body",
+      "primitive": [
+        {
+          "shape": "capsule",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            0.13,
+            0.15,
+            0
+          ],
+          "colorable": false
+        }
+      ],
+      "attachTo": "chest",
+      "defaultColor": "#ffe0bd",
+      "colorable": false,
+      "compatible": true,
+      "estimatedTriangles": 480,
+      "tags": [
+        "round"
+      ]
+    }
+  ],
+  "face": [
+    {
+      "id": "face_normal",
+      "name": "Normal Face",
+      "nameJa": "ふつう",
+      "category": "face",
+      "primitive": [
+        {
+          "shape": "sphere",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            0.2,
+            0.19,
+            0.2
+          ],
+          "colorable": false
+        }
+      ],
+      "attachTo": "head",
+      "defaultColor": "#ffe0bd",
+      "colorable": false,
+      "compatible": true,
+      "estimatedTriangles": 960,
+      "tags": [
+        "normal"
+      ]
+    },
+    {
+      "id": "face_cute",
+      "name": "Cute Face",
+      "nameJa": "キュート",
+      "category": "face",
+      "primitive": [
+        {
+          "shape": "sphere",
+          "position": [
+            0,
+            -0.01,
+            0
+          ],
+          "size": [
+            0.19,
+            0.19,
+            0.19
+          ],
+          "colorable": false
+        }
+      ],
+      "attachTo": "head",
+      "defaultColor": "#ffe6cc",
+      "colorable": false,
+      "compatible": true,
+      "estimatedTriangles": 960,
+      "tags": [
+        "cute"
+      ]
+    },
+    {
+      "id": "face_round",
+      "name": "Round Face",
+      "nameJa": "まる顔",
+      "category": "face",
+      "primitive": [
+        {
+          "shape": "sphere",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            0.21,
+            0.21,
+            0.21
+          ],
+          "colorable": false
+        }
+      ],
+      "attachTo": "head",
+      "defaultColor": "#ffe0bd",
+      "colorable": false,
+      "compatible": true,
+      "estimatedTriangles": 960,
+      "tags": [
+        "round"
+      ]
+    },
+    {
+      "id": "face_anime",
+      "name": "Anime Face",
+      "nameJa": "アニメ風",
+      "category": "face",
+      "primitive": [
+        {
+          "shape": "sphere",
+          "position": [
+            0,
+            0,
+            0.01
+          ],
+          "size": [
+            0.2,
+            0.2,
+            0.21
+          ],
+          "colorable": false
+        }
+      ],
+      "attachTo": "head",
+      "defaultColor": "#ffe9d6",
+      "colorable": false,
+      "compatible": true,
+      "estimatedTriangles": 960,
+      "tags": [
+        "anime"
+      ]
+    }
+  ],
+  "eyes": [
+    {
+      "id": "eye_01",
+      "name": "Round Eyes",
+      "nameJa": "まるい目",
+      "category": "eyes",
+      "primitive": [
+        {
+          "shape": "sphere",
+          "position": [
+            -0.075,
+            0,
+            0.24
+          ],
+          "size": [
+            0.028,
+            0.028,
+            0.012
+          ],
+          "colorable": true
+        },
+        {
+          "shape": "sphere",
+          "position": [
+            0.075,
+            0,
+            0.24
+          ],
+          "size": [
+            0.028,
+            0.028,
+            0.012
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "head",
+      "defaultColor": "#3b2a1a",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 320,
+      "tags": [
+        "round"
+      ]
+    },
+    {
+      "id": "eye_02",
+      "name": "Big Sparkle Eyes",
+      "nameJa": "うるうる目",
+      "category": "eyes",
+      "primitive": [
+        {
+          "shape": "sphere",
+          "position": [
+            -0.08,
+            0,
+            0.245
+          ],
+          "size": [
+            0.036,
+            0.036,
+            0.014
+          ],
+          "colorable": true
+        },
+        {
+          "shape": "sphere",
+          "position": [
+            0.08,
+            0,
+            0.245
+          ],
+          "size": [
+            0.036,
+            0.036,
+            0.014
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "head",
+      "defaultColor": "#2a5aa8",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 320,
+      "tags": [
+        "big"
+      ]
+    },
+    {
+      "id": "eye_03",
+      "name": "Sharp Eyes",
+      "nameJa": "つり目",
+      "category": "eyes",
+      "primitive": [
+        {
+          "shape": "box",
+          "position": [
+            -0.075,
+            0,
+            0.24
+          ],
+          "rotation": [
+            0,
+            0,
+            0.3
+          ],
+          "size": [
+            0.045,
+            0.018,
+            0.01
+          ],
+          "colorable": true
+        },
+        {
+          "shape": "box",
+          "position": [
+            0.075,
+            0,
+            0.24
+          ],
+          "rotation": [
+            0,
+            0,
+            -0.3
+          ],
+          "size": [
+            0.045,
+            0.018,
+            0.01
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "head",
+      "defaultColor": "#4a2a1a",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 120,
+      "tags": [
+        "sharp"
+      ]
+    },
+    {
+      "id": "eye_04",
+      "name": "Droopy Eyes",
+      "nameJa": "たれ目",
+      "category": "eyes",
+      "primitive": [
+        {
+          "shape": "box",
+          "position": [
+            -0.075,
+            0,
+            0.24
+          ],
+          "rotation": [
+            0,
+            0,
+            -0.2
+          ],
+          "size": [
+            0.042,
+            0.02,
+            0.01
+          ],
+          "colorable": true
+        },
+        {
+          "shape": "box",
+          "position": [
+            0.075,
+            0,
+            0.24
+          ],
+          "rotation": [
+            0,
+            0,
+            0.2
+          ],
+          "size": [
+            0.042,
+            0.02,
+            0.01
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "head",
+      "defaultColor": "#5a4a2a",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 120,
+      "tags": [
+        "droopy"
+      ]
+    },
+    {
+      "id": "eye_05",
+      "name": "Star Eyes",
+      "nameJa": "星の目",
+      "category": "eyes",
+      "primitive": [
+        {
+          "shape": "torus",
+          "position": [
+            -0.075,
+            0,
+            0.24
+          ],
+          "size": [
+            0.025,
+            0.01,
+            0
+          ],
+          "colorable": true
+        },
+        {
+          "shape": "torus",
+          "position": [
+            0.075,
+            0,
+            0.24
+          ],
+          "size": [
+            0.025,
+            0.01,
+            0
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "head",
+      "defaultColor": "#d4af37",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 480,
+      "tags": [
+        "star",
+        "fantasy"
+      ]
+    }
+  ],
+  "mouth": [
+    {
+      "id": "mouth_01",
+      "name": "Smile",
+      "nameJa": "スマイル",
+      "category": "mouth",
+      "primitive": [
+        {
+          "shape": "torus",
+          "position": [
+            0,
+            -0.07,
+            0.215
+          ],
+          "rotation": [
+            1.5708,
+            0,
+            0
+          ],
+          "size": [
+            0.02,
+            0.006,
+            0
+          ],
+          "colorable": false
+        }
+      ],
+      "attachTo": "head",
+      "defaultColor": "#c65a5a",
+      "colorable": false,
+      "compatible": true,
+      "estimatedTriangles": 240,
+      "tags": [
+        "smile"
+      ]
+    },
+    {
+      "id": "mouth_02",
+      "name": "Small Mouth",
+      "nameJa": "小さい口",
+      "category": "mouth",
+      "primitive": [
+        {
+          "shape": "box",
+          "position": [
+            0,
+            -0.07,
+            0.215
+          ],
+          "size": [
+            0.02,
+            0.006,
+            0.006
+          ],
+          "colorable": false
+        }
+      ],
+      "attachTo": "head",
+      "defaultColor": "#b04a4a",
+      "colorable": false,
+      "compatible": true,
+      "estimatedTriangles": 24,
+      "tags": [
+        "small"
+      ]
+    },
+    {
+      "id": "mouth_03",
+      "name": "Open Mouth",
+      "nameJa": "あいた口",
+      "category": "mouth",
+      "primitive": [
+        {
+          "shape": "sphere",
+          "position": [
+            0,
+            -0.075,
+            0.215
+          ],
+          "size": [
+            0.018,
+            0.014,
+            0.01
+          ],
+          "colorable": false
+        }
+      ],
+      "attachTo": "head",
+      "defaultColor": "#8a3030",
+      "colorable": false,
+      "compatible": true,
+      "estimatedTriangles": 240,
+      "tags": [
+        "open"
+      ]
+    },
+    {
+      "id": "mouth_04",
+      "name": "Cat Mouth",
+      "nameJa": "ねこ口",
+      "category": "mouth",
+      "primitive": [
+        {
+          "shape": "torus",
+          "position": [
+            -0.008,
+            -0.07,
+            0.215
+          ],
+          "rotation": [
+            1.5708,
+            0,
+            0
+          ],
+          "size": [
+            0.012,
+            0.005,
+            0
+          ],
+          "colorable": false
+        },
+        {
+          "shape": "torus",
+          "position": [
+            0.008,
+            -0.07,
+            0.215
+          ],
+          "rotation": [
+            1.5708,
+            0,
+            0
+          ],
+          "size": [
+            0.012,
+            0.005,
+            0
+          ],
+          "colorable": false
+        }
+      ],
+      "attachTo": "head",
+      "defaultColor": "#c65a5a",
+      "colorable": false,
+      "compatible": true,
+      "estimatedTriangles": 480,
+      "tags": [
+        "cat"
+      ]
+    }
+  ],
+  "hair": [
+    {
+      "id": "hair_short",
+      "name": "Short Hair",
+      "nameJa": "ショート",
+      "category": "hair",
+      "primitive": [
+        {
+          "shape": "sphere",
+          "position": [
+            0,
+            0.02,
+            -0.01
+          ],
+          "size": [
+            0.23,
+            0.179,
+            0.224
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "head",
+      "defaultColor": "#4a3028",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 700,
+      "tags": [
+        "short"
+      ]
+    },
+    {
+      "id": "hair_long",
+      "name": "Long Hair",
+      "nameJa": "ロング",
+      "category": "hair",
+      "primitive": [
+        {
+          "shape": "sphere",
+          "position": [
+            0,
+            0.02,
+            -0.01
+          ],
+          "size": [
+            0.23,
+            0.179,
+            0.224
+          ],
+          "colorable": true
+        },
+        {
+          "shape": "capsule",
+          "position": [
+            0,
+            -0.16,
+            -0.05
+          ],
+          "size": [
+            0.09,
+            0.2,
+            0
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "head",
+      "defaultColor": "#2a1c16",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 1100,
+      "tags": [
+        "long"
+      ]
+    },
+    {
+      "id": "hair_bob",
+      "name": "Bob",
+      "nameJa": "ボブ",
+      "category": "hair",
+      "primitive": [
+        {
+          "shape": "sphere",
+          "position": [
+            0,
+            0,
+            -0.01
+          ],
+          "size": [
+            0.235,
+            0.19,
+            0.235
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "head",
+      "defaultColor": "#6b4226",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 700,
+      "tags": [
+        "bob"
+      ]
+    },
+    {
+      "id": "hair_ponytail",
+      "name": "Ponytail",
+      "nameJa": "ポニーテール",
+      "category": "hair",
+      "primitive": [
+        {
+          "shape": "sphere",
+          "position": [
+            0,
+            0.02,
+            -0.01
+          ],
+          "size": [
+            0.23,
+            0.179,
+            0.224
+          ],
+          "colorable": true
+        },
+        {
+          "shape": "capsule",
+          "position": [
+            0,
+            -0.05,
+            -0.19
+          ],
+          "rotation": [
+            0.9,
+            0,
+            0
+          ],
+          "size": [
+            0.045,
+            0.18,
+            0
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "head",
+      "defaultColor": "#3a2a1e",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 900,
+      "tags": [
+        "ponytail"
+      ]
+    },
+    {
+      "id": "hair_twin_tail",
+      "name": "Twin Tail",
+      "nameJa": "ツインテール",
+      "category": "hair",
+      "primitive": [
+        {
+          "shape": "sphere",
+          "position": [
+            0,
+            0.02,
+            -0.01
+          ],
+          "size": [
+            0.23,
+            0.179,
+            0.224
+          ],
+          "colorable": true
+        },
+        {
+          "shape": "capsule",
+          "position": [
+            -0.19,
+            -0.03,
+            -0.02
+          ],
+          "rotation": [
+            0,
+            0,
+            0.3
+          ],
+          "size": [
+            0.04,
+            0.16,
+            0
+          ],
+          "colorable": true
+        },
+        {
+          "shape": "capsule",
+          "position": [
+            0.19,
+            -0.03,
+            -0.02
+          ],
+          "rotation": [
+            0,
+            0,
+            -0.3
+          ],
+          "size": [
+            0.04,
+            0.16,
+            0
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "head",
+      "defaultColor": "#7a3f5a",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 1100,
+      "tags": [
+        "twintail",
+        "cute"
+      ]
+    },
+    {
+      "id": "hair_wolf",
+      "name": "Wolf Cut",
+      "nameJa": "ウルフカット",
+      "category": "hair",
+      "primitive": [
+        {
+          "shape": "sphere",
+          "position": [
+            0,
+            0.02,
+            -0.01
+          ],
+          "size": [
+            0.235,
+            0.185,
+            0.224
+          ],
+          "colorable": true
+        },
+        {
+          "shape": "cone",
+          "position": [
+            -0.12,
+            0.16,
+            -0.02
+          ],
+          "rotation": [
+            0,
+            0,
+            0.4
+          ],
+          "size": [
+            0.03,
+            0.08,
+            0
+          ],
+          "colorable": true
+        },
+        {
+          "shape": "cone",
+          "position": [
+            0.12,
+            0.16,
+            -0.02
+          ],
+          "rotation": [
+            0,
+            0,
+            -0.4
+          ],
+          "size": [
+            0.03,
+            0.08,
+            0
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "head",
+      "defaultColor": "#5a5a5a",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 900,
+      "tags": [
+        "wolf",
+        "animal"
+      ]
+    },
+    {
+      "id": "hair_samurai",
+      "name": "Samurai Topknot",
+      "nameJa": "ちょんまげ",
+      "category": "hair",
+      "primitive": [
+        {
+          "shape": "sphere",
+          "position": [
+            0,
+            -0.02,
+            -0.01
+          ],
+          "size": [
+            0.224,
+            0.168,
+            0.224
+          ],
+          "colorable": true
+        },
+        {
+          "shape": "capsule",
+          "position": [
+            0,
+            0.14,
+            0
+          ],
+          "rotation": [
+            1.5708,
+            0,
+            0
+          ],
+          "size": [
+            0.02,
+            0.12,
+            0
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "head",
+      "defaultColor": "#1c1c1c",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 900,
+      "tags": [
+        "samurai",
+        "japanese"
+      ]
+    },
+    {
+      "id": "hair_ninja",
+      "name": "Ninja Hair",
+      "nameJa": "忍者ヘアー",
+      "category": "hair",
+      "primitive": [
+        {
+          "shape": "sphere",
+          "position": [
+            0,
+            -0.01,
+            -0.02
+          ],
+          "size": [
+            0.213,
+            0.157,
+            0.213
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "head",
+      "defaultColor": "#101010",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 700,
+      "tags": [
+        "ninja"
+      ]
+    },
+    {
+      "id": "hair_fantasy",
+      "name": "Fantasy Waves",
+      "nameJa": "ファンタジー",
+      "category": "hair",
+      "primitive": [
+        {
+          "shape": "sphere",
+          "position": [
+            0,
+            0.02,
+            -0.01
+          ],
+          "size": [
+            0.235,
+            0.19,
+            0.235
+          ],
+          "colorable": true
+        },
+        {
+          "shape": "capsule",
+          "position": [
+            -0.16,
+            -0.1,
+            -0.03
+          ],
+          "size": [
+            0.05,
+            0.16,
+            0
+          ],
+          "colorable": true
+        },
+        {
+          "shape": "capsule",
+          "position": [
+            0.16,
+            -0.1,
+            -0.03
+          ],
+          "size": [
+            0.05,
+            0.16,
+            0
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "head",
+      "defaultColor": "#9b6fd6",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 1300,
+      "tags": [
+        "fantasy"
+      ]
+    },
+    {
+      "id": "hair_cat",
+      "name": "Cat Style",
+      "nameJa": "ねこ風",
+      "category": "hair",
+      "primitive": [
+        {
+          "shape": "sphere",
+          "position": [
+            0,
+            0.01,
+            -0.01
+          ],
+          "size": [
+            0.224,
+            0.179,
+            0.224
+          ],
+          "colorable": true
+        },
+        {
+          "shape": "cone",
+          "position": [
+            -0.1,
+            0.17,
+            0.02
+          ],
+          "size": [
+            0.035,
+            0.06,
+            0
+          ],
+          "colorable": true
+        },
+        {
+          "shape": "cone",
+          "position": [
+            0.1,
+            0.17,
+            0.02
+          ],
+          "size": [
+            0.035,
+            0.06,
+            0
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "head",
+      "defaultColor": "#e0a45c",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 900,
+      "tags": [
+        "cat",
+        "animal"
+      ]
+    }
+  ],
+  "clothes": [
+    {
+      "id": "clothes_hoodie",
+      "name": "Hoodie",
+      "nameJa": "パーカー",
+      "category": "clothes",
+      "primitive": [
+        {
+          "shape": "capsule",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            0.125,
+            0.17,
+            0
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "chest",
+      "defaultColor": "#5a7fb5",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 520,
+      "tags": [
+        "casual"
+      ]
+    },
+    {
+      "id": "clothes_tshirt",
+      "name": "T-Shirt",
+      "nameJa": "Tシャツ",
+      "category": "clothes",
+      "primitive": [
+        {
+          "shape": "capsule",
+          "position": [
+            0,
+            0.01,
+            0
+          ],
+          "size": [
+            0.115,
+            0.14,
+            0
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "chest",
+      "defaultColor": "#e8e8e8",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 480,
+      "tags": [
+        "casual"
+      ]
+    },
+    {
+      "id": "clothes_school",
+      "name": "School Uniform",
+      "nameJa": "学生服",
+      "category": "clothes",
+      "primitive": [
+        {
+          "shape": "capsule",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            0.115,
+            0.17,
+            0
+          ],
+          "colorable": true
+        },
+        {
+          "shape": "box",
+          "position": [
+            0,
+            0.1,
+            0.09
+          ],
+          "size": [
+            0.09,
+            0.03,
+            0.02
+          ],
+          "colorable": false
+        }
+      ],
+      "attachTo": "chest",
+      "defaultColor": "#2a3a5a",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 560,
+      "tags": [
+        "school"
+      ]
+    },
+    {
+      "id": "clothes_yukata",
+      "name": "Yukata",
+      "nameJa": "浴衣",
+      "category": "clothes",
+      "primitive": [
+        {
+          "shape": "cone",
+          "position": [
+            0,
+            -0.04,
+            0
+          ],
+          "size": [
+            0.14,
+            0.32,
+            0
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "chest",
+      "defaultColor": "#3a6f6f",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 480,
+      "tags": [
+        "japanese"
+      ]
+    },
+    {
+      "id": "clothes_kimono",
+      "name": "Kimono",
+      "nameJa": "着物",
+      "category": "clothes",
+      "primitive": [
+        {
+          "shape": "cone",
+          "position": [
+            0,
+            -0.04,
+            0
+          ],
+          "size": [
+            0.15,
+            0.33,
+            0
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "chest",
+      "defaultColor": "#a83f5a",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 480,
+      "tags": [
+        "japanese"
+      ]
+    },
+    {
+      "id": "clothes_samurai",
+      "name": "Samurai Armor",
+      "nameJa": "武者よろい",
+      "category": "clothes",
+      "primitive": [
+        {
+          "shape": "capsule",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            0.13,
+            0.17,
+            0
+          ],
+          "colorable": true
+        },
+        {
+          "shape": "box",
+          "position": [
+            0,
+            0.03,
+            0
+          ],
+          "size": [
+            0.16,
+            0.05,
+            0.16
+          ],
+          "colorable": false
+        }
+      ],
+      "attachTo": "chest",
+      "defaultColor": "#3a3a3a",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 640,
+      "tags": [
+        "samurai",
+        "japanese"
+      ]
+    },
+    {
+      "id": "clothes_ninja",
+      "name": "Ninja Outfit",
+      "nameJa": "忍者装束",
+      "category": "clothes",
+      "primitive": [
+        {
+          "shape": "capsule",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            0.115,
+            0.17,
+            0
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "chest",
+      "defaultColor": "#1c1c2c",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 480,
+      "tags": [
+        "ninja"
+      ]
+    },
+    {
+      "id": "clothes_fantasy",
+      "name": "Fantasy Robe",
+      "nameJa": "ファンタジーローブ",
+      "category": "clothes",
+      "primitive": [
+        {
+          "shape": "cone",
+          "position": [
+            0,
+            -0.05,
+            0
+          ],
+          "size": [
+            0.16,
+            0.34,
+            0
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "chest",
+      "defaultColor": "#6f4fb5",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 480,
+      "tags": [
+        "fantasy"
+      ]
+    },
+    {
+      "id": "clothes_maid",
+      "name": "Maid Outfit",
+      "nameJa": "メイド服",
+      "category": "clothes",
+      "primitive": [
+        {
+          "shape": "capsule",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            0.12,
+            0.17,
+            0
+          ],
+          "colorable": true
+        },
+        {
+          "shape": "box",
+          "position": [
+            0,
+            -0.1,
+            0.02
+          ],
+          "size": [
+            0.14,
+            0.02,
+            0.14
+          ],
+          "colorable": false
+        }
+      ],
+      "attachTo": "chest",
+      "defaultColor": "#2c2c2c",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 560,
+      "tags": [
+        "maid"
+      ]
+    },
+    {
+      "id": "clothes_casual",
+      "name": "Casual Wear",
+      "nameJa": "カジュアル",
+      "category": "clothes",
+      "primitive": [
+        {
+          "shape": "capsule",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            0.12,
+            0.165,
+            0
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "chest",
+      "defaultColor": "#c98a4b",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 480,
+      "tags": [
+        "casual"
+      ]
+    }
+  ],
+  "shoes": [
+    {
+      "id": "shoe_sneaker",
+      "name": "Sneakers",
+      "nameJa": "スニーカー",
+      "category": "shoes",
+      "primitive": [
+        {
+          "shape": "box",
+          "position": [
+            0,
+            0.025,
+            0.03
+          ],
+          "size": [
+            0.11,
+            0.065,
+            0.15
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "leftFoot",
+      "defaultColor": "#ffffff",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 24,
+      "tags": [
+        "casual"
+      ]
+    },
+    {
+      "id": "shoe_boot",
+      "name": "Boots",
+      "nameJa": "ブーツ",
+      "category": "shoes",
+      "primitive": [
+        {
+          "shape": "box",
+          "position": [
+            0,
+            0.055,
+            0.02
+          ],
+          "size": [
+            0.11,
+            0.13,
+            0.14
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "leftFoot",
+      "defaultColor": "#4a3020",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 24,
+      "tags": [
+        "boot"
+      ]
+    },
+    {
+      "id": "shoe_sandal",
+      "name": "Sandals",
+      "nameJa": "サンダル",
+      "category": "shoes",
+      "primitive": [
+        {
+          "shape": "box",
+          "position": [
+            0,
+            0.015,
+            0.03
+          ],
+          "size": [
+            0.11,
+            0.03,
+            0.16
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "leftFoot",
+      "defaultColor": "#c9a06b",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 24,
+      "tags": [
+        "sandal"
+      ]
+    },
+    {
+      "id": "shoe_geta",
+      "name": "Geta",
+      "nameJa": "下駄",
+      "category": "shoes",
+      "primitive": [
+        {
+          "shape": "box",
+          "position": [
+            0,
+            0.018,
+            0.03
+          ],
+          "size": [
+            0.115,
+            0.035,
+            0.17
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "leftFoot",
+      "defaultColor": "#8a6a3a",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 24,
+      "tags": [
+        "geta",
+        "japanese"
+      ]
+    },
+    {
+      "id": "shoe_fantasy_boot",
+      "name": "Fantasy Boots",
+      "nameJa": "ファンタジーブーツ",
+      "category": "shoes",
+      "primitive": [
+        {
+          "shape": "cone",
+          "position": [
+            0,
+            0.09,
+            0.01
+          ],
+          "size": [
+            0.075,
+            0.18,
+            0
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "leftFoot",
+      "defaultColor": "#5a3a8a",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 240,
+      "tags": [
+        "fantasy"
+      ]
+    }
+  ],
+  "accessories": [
+    {
+      "id": "acc_glasses",
+      "name": "Glasses",
+      "nameJa": "メガネ",
+      "category": "accessories",
+      "primitive": [
+        {
+          "shape": "torus",
+          "position": [
+            -0.075,
+            0,
+            0.24
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            0.03,
+            0.006,
+            0
+          ],
+          "colorable": true
+        },
+        {
+          "shape": "torus",
+          "position": [
+            0.075,
+            0,
+            0.24
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            0.03,
+            0.006,
+            0
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "head",
+      "defaultColor": "#1c1c1c",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 960,
+      "tags": [
+        "glasses"
+      ]
+    },
+    {
+      "id": "acc_hat",
+      "name": "Witch Hat",
+      "nameJa": "とんがり帽子",
+      "category": "accessories",
+      "primitive": [
+        {
+          "shape": "cone",
+          "position": [
+            0,
+            0.2,
+            0
+          ],
+          "size": [
+            0.16,
+            0.28,
+            0
+          ],
+          "colorable": true
+        },
+        {
+          "shape": "cylinder",
+          "position": [
+            0,
+            0.06,
+            0
+          ],
+          "size": [
+            0.2,
+            0.2,
+            0.02
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "head",
+      "defaultColor": "#3a2a5a",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 720,
+      "tags": [
+        "hat",
+        "halloween",
+        "fantasy"
+      ]
+    },
+    {
+      "id": "acc_cat_ears",
+      "name": "Cat Ears",
+      "nameJa": "猫耳",
+      "category": "accessories",
+      "primitive": [
+        {
+          "shape": "cone",
+          "position": [
+            -0.1,
+            0.17,
+            0.02
+          ],
+          "size": [
+            0.035,
+            0.07,
+            0
+          ],
+          "colorable": true
+        },
+        {
+          "shape": "cone",
+          "position": [
+            0.1,
+            0.17,
+            0.02
+          ],
+          "size": [
+            0.035,
+            0.07,
+            0
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "head",
+      "defaultColor": "#e0a45c",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 480,
+      "tags": [
+        "cat",
+        "animal"
+      ]
+    },
+    {
+      "id": "acc_fox_ears",
+      "name": "Fox Ears",
+      "nameJa": "きつね耳",
+      "category": "accessories",
+      "primitive": [
+        {
+          "shape": "cone",
+          "position": [
+            -0.09,
+            0.18,
+            0.01
+          ],
+          "size": [
+            0.03,
+            0.09,
+            0
+          ],
+          "colorable": true
+        },
+        {
+          "shape": "cone",
+          "position": [
+            0.09,
+            0.18,
+            0.01
+          ],
+          "size": [
+            0.03,
+            0.09,
+            0
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "head",
+      "defaultColor": "#d67a2c",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 480,
+      "tags": [
+        "fox",
+        "animal"
+      ]
+    },
+    {
+      "id": "acc_headphones",
+      "name": "Headphones",
+      "nameJa": "ヘッドホン",
+      "category": "accessories",
+      "primitive": [
+        {
+          "shape": "torus",
+          "position": [
+            0,
+            0.16,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            1.5708
+          ],
+          "size": [
+            0.19,
+            0.025,
+            0
+          ],
+          "colorable": true
+        },
+        {
+          "shape": "sphere",
+          "position": [
+            -0.2,
+            0,
+            0
+          ],
+          "size": [
+            0.04,
+            0.05,
+            0.04
+          ],
+          "colorable": true
+        },
+        {
+          "shape": "sphere",
+          "position": [
+            0.2,
+            0,
+            0
+          ],
+          "size": [
+            0.04,
+            0.05,
+            0.04
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "head",
+      "defaultColor": "#2a2a2a",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 1400,
+      "tags": [
+        "headphones"
+      ]
+    },
+    {
+      "id": "acc_ribbon",
+      "name": "Ribbon",
+      "nameJa": "リボン",
+      "category": "accessories",
+      "primitive": [
+        {
+          "shape": "cone",
+          "position": [
+            -0.03,
+            0.18,
+            0.02
+          ],
+          "rotation": [
+            0,
+            0,
+            1.5708
+          ],
+          "size": [
+            0.03,
+            0.05,
+            0
+          ],
+          "colorable": true
+        },
+        {
+          "shape": "cone",
+          "position": [
+            0.03,
+            0.18,
+            0.02
+          ],
+          "rotation": [
+            0,
+            0,
+            -1.5708
+          ],
+          "size": [
+            0.03,
+            0.05,
+            0
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "head",
+      "defaultColor": "#d63a6a",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 480,
+      "tags": [
+        "ribbon",
+        "cute"
+      ]
+    },
+    {
+      "id": "acc_crown",
+      "name": "Crown",
+      "nameJa": "王冠",
+      "category": "accessories",
+      "primitive": [
+        {
+          "shape": "cylinder",
+          "position": [
+            0,
+            0.19,
+            0
+          ],
+          "size": [
+            0.15,
+            0.13,
+            0.05
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "head",
+      "defaultColor": "#d4af37",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 480,
+      "tags": [
+        "crown",
+        "fantasy"
+      ]
+    }
+  ],
+  "back": [
+    {
+      "id": "back_sword",
+      "name": "Sword",
+      "nameJa": "けん",
+      "category": "back",
+      "primitive": [
+        {
+          "shape": "box",
+          "position": [
+            0.1,
+            0.02,
+            -0.05
+          ],
+          "rotation": [
+            0,
+            0,
+            0.3
+          ],
+          "size": [
+            0.015,
+            0.22,
+            0.015
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "chest",
+      "defaultColor": "#c0c0c0",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 24,
+      "tags": [
+        "sword",
+        "weapon"
+      ]
+    },
+    {
+      "id": "back_katana",
+      "name": "Katana",
+      "nameJa": "かたな",
+      "category": "back",
+      "primitive": [
+        {
+          "shape": "box",
+          "position": [
+            0.09,
+            0.03,
+            -0.06
+          ],
+          "rotation": [
+            0.1,
+            0,
+            0.5
+          ],
+          "size": [
+            0.012,
+            0.26,
+            0.012
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "chest",
+      "defaultColor": "#dcdcdc",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 24,
+      "tags": [
+        "katana",
+        "samurai",
+        "ninja",
+        "weapon"
+      ]
+    },
+    {
+      "id": "back_backpack",
+      "name": "Backpack",
+      "nameJa": "リュック",
+      "category": "back",
+      "primitive": [
+        {
+          "shape": "box",
+          "position": [
+            0,
+            0,
+            -0.1
+          ],
+          "size": [
+            0.13,
+            0.15,
+            0.08
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "chest",
+      "defaultColor": "#6f4a2a",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 24,
+      "tags": [
+        "backpack"
+      ]
+    },
+    {
+      "id": "back_wings",
+      "name": "Wings",
+      "nameJa": "つばさ",
+      "category": "back",
+      "primitive": [
+        {
+          "shape": "cone",
+          "position": [
+            -0.13,
+            0.02,
+            -0.06
+          ],
+          "rotation": [
+            0,
+            0,
+            1.6
+          ],
+          "size": [
+            0.09,
+            0.22,
+            0
+          ],
+          "colorable": true
+        },
+        {
+          "shape": "cone",
+          "position": [
+            0.13,
+            0.02,
+            -0.06
+          ],
+          "rotation": [
+            0,
+            0,
+            -1.6
+          ],
+          "size": [
+            0.09,
+            0.22,
+            0
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "chest",
+      "defaultColor": "#f5f5f5",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 480,
+      "tags": [
+        "wings",
+        "fantasy"
+      ]
+    },
+    {
+      "id": "back_cape",
+      "name": "Cape",
+      "nameJa": "マント",
+      "category": "back",
+      "primitive": [
+        {
+          "shape": "cone",
+          "position": [
+            0,
+            -0.05,
+            -0.08
+          ],
+          "size": [
+            0.14,
+            0.3,
+            0
+          ],
+          "colorable": true
+        }
+      ],
+      "attachTo": "chest",
+      "defaultColor": "#7a1f2a",
+      "colorable": true,
+      "compatible": true,
+      "estimatedTriangles": 240,
+      "tags": [
+        "cape",
+        "fantasy"
+      ]
+    }
+  ]
+}

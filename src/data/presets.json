@@ -1,0 +1,170 @@
+[
+  {
+    "id": "preset_cute",
+    "name": "Cute",
+    "nameJa": "キュート",
+    "icon": "sparkles",
+    "parts": {
+      "body": "body_01",
+      "face": "face_cute",
+      "eyes": "eye_02",
+      "mouth": "mouth_01",
+      "hair": "hair_twin_tail",
+      "clothes": "clothes_casual",
+      "shoes": "shoe_sneaker",
+      "accessories": ["acc_ribbon"],
+      "back": null
+    },
+    "colors": {
+      "hair": "#e8a0c0",
+      "eyes": "#c060a0",
+      "clothes": "#ffb6c1",
+      "shoes": "#ffffff",
+      "accessories": "#ff6699"
+    }
+  },
+  {
+    "id": "preset_fantasy",
+    "name": "Fantasy",
+    "nameJa": "ファンタジー",
+    "icon": "wand",
+    "parts": {
+      "body": "body_01",
+      "face": "face_anime",
+      "eyes": "eye_05",
+      "mouth": "mouth_01",
+      "hair": "hair_fantasy",
+      "clothes": "clothes_fantasy",
+      "shoes": "shoe_fantasy_boot",
+      "accessories": ["acc_crown"],
+      "back": "back_wings"
+    },
+    "colors": {
+      "hair": "#9b6fd6",
+      "eyes": "#d4af37",
+      "clothes": "#6f4fb5",
+      "shoes": "#5a3a8a",
+      "accessories": "#d4af37"
+    }
+  },
+  {
+    "id": "preset_ninja",
+    "name": "Ninja",
+    "nameJa": "忍者",
+    "icon": "swords",
+    "parts": {
+      "body": "body_02",
+      "face": "face_normal",
+      "eyes": "eye_03",
+      "mouth": "mouth_02",
+      "hair": "hair_ninja",
+      "clothes": "clothes_ninja",
+      "shoes": "shoe_sandal",
+      "accessories": [],
+      "back": "back_katana"
+    },
+    "colors": {
+      "hair": "#101010",
+      "eyes": "#2a2a2a",
+      "clothes": "#1c1c2c",
+      "shoes": "#1c1c1c",
+      "accessories": "#1c1c1c"
+    }
+  },
+  {
+    "id": "preset_samurai",
+    "name": "Samurai",
+    "nameJa": "侍",
+    "icon": "sword",
+    "parts": {
+      "body": "body_01",
+      "face": "face_normal",
+      "eyes": "eye_03",
+      "mouth": "mouth_02",
+      "hair": "hair_samurai",
+      "clothes": "clothes_samurai",
+      "shoes": "shoe_geta",
+      "accessories": [],
+      "back": "back_katana"
+    },
+    "colors": {
+      "hair": "#1c1c1c",
+      "eyes": "#3a2a1a",
+      "clothes": "#3a3a3a",
+      "shoes": "#8a6a3a",
+      "accessories": "#8a6a3a"
+    }
+  },
+  {
+    "id": "preset_halloween",
+    "name": "Halloween",
+    "nameJa": "ハロウィン",
+    "icon": "ghost",
+    "parts": {
+      "body": "body_01",
+      "face": "face_round",
+      "eyes": "eye_02",
+      "mouth": "mouth_03",
+      "hair": "hair_long",
+      "clothes": "clothes_fantasy",
+      "shoes": "shoe_boot",
+      "accessories": ["acc_hat"],
+      "back": "back_cape"
+    },
+    "colors": {
+      "hair": "#5a2a7a",
+      "eyes": "#e07a2a",
+      "clothes": "#1c1c1c",
+      "shoes": "#1c1c1c",
+      "accessories": "#e07a2a"
+    }
+  },
+  {
+    "id": "preset_animal",
+    "name": "Animal",
+    "nameJa": "どうぶつ",
+    "icon": "cat",
+    "parts": {
+      "body": "body_03",
+      "face": "face_cute",
+      "eyes": "eye_01",
+      "mouth": "mouth_04",
+      "hair": "hair_cat",
+      "clothes": "clothes_casual",
+      "shoes": "shoe_sneaker",
+      "accessories": ["acc_cat_ears"],
+      "back": null
+    },
+    "colors": {
+      "hair": "#e0a45c",
+      "eyes": "#5a3a1a",
+      "clothes": "#f0c080",
+      "shoes": "#ffffff",
+      "accessories": "#e0a45c"
+    }
+  },
+  {
+    "id": "preset_japanese",
+    "name": "Japanese",
+    "nameJa": "和風",
+    "icon": "flower",
+    "parts": {
+      "body": "body_01",
+      "face": "face_normal",
+      "eyes": "eye_04",
+      "mouth": "mouth_01",
+      "hair": "hair_bob",
+      "clothes": "clothes_kimono",
+      "shoes": "shoe_geta",
+      "accessories": [],
+      "back": null
+    },
+    "colors": {
+      "hair": "#2a1c16",
+      "eyes": "#3a2a1a",
+      "clothes": "#a83f5a",
+      "shoes": "#8a6a3a",
+      "accessories": "#a83f5a"
+    }
+  }
+]

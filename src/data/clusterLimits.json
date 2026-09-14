@@ -1,0 +1,28 @@
+{
+  "vrmVersion": "1.0",
+  "maxFileSizeMB": 100,
+  "recommendedPolygonCount": 30000,
+  "maxPolygonCount": 70000,
+  "maxMaterials": 25,
+  "recommendedMaterials": 10,
+  "maxTextures": 25,
+  "maxTextureResolution": 2048,
+  "requiredHumanoidBones": [
+    "hips",
+    "spine",
+    "head",
+    "leftUpperArm",
+    "rightUpperArm",
+    "leftLowerArm",
+    "rightLowerArm",
+    "leftHand",
+    "rightHand",
+    "leftUpperLeg",
+    "rightUpperLeg",
+    "leftLowerLeg",
+    "rightLowerLeg",
+    "leftFoot",
+    "rightFoot"
+  ],
+  "notes": "cluster の最新アップロード要件は変更される可能性があるため、この値は定期的に見直してください。ここを更新するだけでアプリ全体のチェック内容に反映されます。"
+}
