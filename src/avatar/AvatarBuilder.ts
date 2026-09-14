@@ -3,6 +3,7 @@ import { buildHumanoidRig, type BoneName, type Rig } from './HumanoidRig';
 import { buildPrimitiveMesh, countMeshTriangles } from './PartMeshFactory';
 import { getPartById } from './PartManager';
 import { getChibiBaseBody } from './ChibiBaseBody';
+import { getRichBody, RICH_BODY_SCALE } from './RichBodyModel';
 import type { AvatarConfig, ColorableSlot } from '../types/avatar';
 import type { PartCategory, PartDefinition } from '../types/parts';
 
@@ -178,7 +179,10 @@ function buildNeck(
   return mesh;
 }
 
-function buildExpressionExtras(headBone: THREE.Bone): Omit<ExpressionTargets, 'mouth' | 'eyes' | 'headBone'> {
+function buildExpressionExtras(
+  headBone: THREE.Bone,
+  attach: boolean,
+): Omit<ExpressionTargets, 'mouth' | 'eyes' | 'headBone'> {
   const browMaterial = new THREE.MeshStandardMaterial({ color: '#3a2a1a', roughness: 0.8 });
   const eyebrowLeft = new THREE.Mesh(new THREE.BoxGeometry(0.045, 0.008, 0.008), browMaterial);
   eyebrowLeft.name = 'eyebrowLeft';
@@ -203,7 +207,10 @@ function buildExpressionExtras(headBone: THREE.Bone): Omit<ExpressionTargets, 'm
   blushRight.position.set(0.11, -0.04, 0.21);
   blushRight.rotation.y = 0.5;
 
-  headBone.add(eyebrowLeft, eyebrowRight, blushLeft, blushRight);
+  // Skipped when the active body already bakes a face into its texture
+  // (see RichBodyModel.ts) — attaching these too would draw a second,
+  // floating pair of eyebrows/blush in front of the sculpted ones.
+  if (attach) headBone.add(eyebrowLeft, eyebrowRight, blushLeft, blushRight);
   return { eyebrowLeft, eyebrowRight, blushLeft, blushRight };
 }
 
@@ -264,31 +271,53 @@ export function buildAvatarScene(config: AvatarConfig): BuiltAvatar {
 
   const bodyPart = getPartById('body', config.parts.body);
   const facePart = getPartById('face', config.parts.face);
+  // Progressive-enhancement loading tiers, best available wins: the rich
+  // single-mesh body (baked face, no rig — see RichBodyModel.ts) > the
+  // segmented real body (bends at bones, plainer face — ChibiBaseBody.ts)
+  // > procedural primitives (instant, never blocks the app on a download).
+  let usingRichBody = false;
   if (bodyPart) {
-    const realBodyMeshes = attachRealBody(bones, bodyPart.defaultColor, materialRegistry);
-    if (realBodyMeshes.size > 0) {
+    const richBody = getRichBody();
+    if (richBody) {
+      usingRichBody = true;
       usedParts.push(bodyPart);
-      if (facePart) usedParts.push(facePart);
-      const bodyScale = BODY_SCALE[bodyPart.id] ?? [1, 1, 1];
-      realBodyMeshes.get('Torso')?.scale.set(...bodyScale);
-      realBodyMeshes.get('Hips')?.scale.set(...bodyScale);
-      const faceScale = FACE_SCALE[facePart?.id ?? ''] ?? [1, 1, 1];
-      realBodyMeshes.get('Head')?.scale.set(...faceScale);
+      const bodyClone = richBody.clone(true);
+      bodyClone.name = 'part_rich_body';
+      bodyClone.scale.setScalar(RICH_BODY_SCALE);
+      const hipsWorld = new THREE.Vector3();
+      bones.hips.getWorldPosition(hipsWorld);
+      bodyClone.position.set(-hipsWorld.x, -hipsWorld.y, -hipsWorld.z);
+      bones.hips.add(bodyClone);
     } else {
-      // Real asset not loaded yet (or unavailable) — fall back to
-      // procedural primitives so the app is never blocked on the network.
-      attachSimple('body', config.parts.body, null);
-      attachSimple('face', config.parts.face, null);
-      buildLimbs(bones, bodyPart.defaultColor, materialRegistry);
-      buildNeck(bones, bodyPart.defaultColor, materialRegistry);
+      const realBodyMeshes = attachRealBody(bones, bodyPart.defaultColor, materialRegistry);
+      if (realBodyMeshes.size > 0) {
+        usedParts.push(bodyPart);
+        if (facePart) usedParts.push(facePart);
+        const bodyScale = BODY_SCALE[bodyPart.id] ?? [1, 1, 1];
+        realBodyMeshes.get('Torso')?.scale.set(...bodyScale);
+        realBodyMeshes.get('Hips')?.scale.set(...bodyScale);
+        const faceScale = FACE_SCALE[facePart?.id ?? ''] ?? [1, 1, 1];
+        realBodyMeshes.get('Head')?.scale.set(...faceScale);
+      } else {
+        // Nothing downloaded yet — fall back to procedural primitives so
+        // the app is never blocked on the network.
+        attachSimple('body', config.parts.body, null);
+        attachSimple('face', config.parts.face, null);
+        buildLimbs(bones, bodyPart.defaultColor, materialRegistry);
+        buildNeck(bones, bodyPart.defaultColor, materialRegistry);
+      }
     }
   }
 
-  const eyesResult = attachSimple('eyes', config.parts.eyes, 'eyes');
-  if (eyesResult) eyeMeshes = eyesResult.meshes;
+  // The rich body bakes eyes/eyebrows/mouth into its own texture — skip
+  // the primitive overlays entirely rather than drawing a second face.
+  if (!usingRichBody) {
+    const eyesResult = attachSimple('eyes', config.parts.eyes, 'eyes');
+    if (eyesResult) eyeMeshes = eyesResult.meshes;
 
-  const mouthResult = attachSimple('mouth', config.parts.mouth, null);
-  if (mouthResult) mouthMeshes = mouthResult.meshes;
+    const mouthResult = attachSimple('mouth', config.parts.mouth, null);
+    if (mouthResult) mouthMeshes = mouthResult.meshes;
+  }
 
   attachSimple('hair', config.parts.hair, 'hair');
   attachSimple('clothes', config.parts.clothes, 'clothes');
@@ -310,7 +339,7 @@ export function buildAvatarScene(config: AvatarConfig): BuiltAvatar {
     attachSimple('accessories', accessoryId, 'accessories');
   }
 
-  const extras = buildExpressionExtras(bones.head);
+  const extras = buildExpressionExtras(bones.head, !usingRichBody);
 
   let triangleCount = 0;
   root.traverse((obj) => {

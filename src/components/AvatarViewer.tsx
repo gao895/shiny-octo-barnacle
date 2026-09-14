@@ -9,7 +9,31 @@ import { applyExpression } from '../avatar/ExpressionController';
 import { applyAnimationFrame, applyTPose } from '../avatar/AnimationController';
 import { disposeObject3D } from '../avatar/AvatarLoader';
 import { preloadChibiBaseBody, getChibiBaseBody } from '../avatar/ChibiBaseBody';
+import { preloadRichBody, getRichBody } from '../avatar/RichBodyModel';
 import type { AvatarConfig } from '../types/avatar';
+
+/** Tracks whether a lazily-preloaded body asset has finished downloading,
+ * so callers can trigger a rebuild once it becomes available. */
+function useAssetReady(preload: () => Promise<unknown>, isReady: () => boolean): boolean {
+  const [ready, setReady] = useState(isReady);
+  useEffect(() => {
+    if (ready) return;
+    let cancelled = false;
+    preload()
+      .then(() => {
+        if (!cancelled) setReady(true);
+      })
+      .catch(() => {
+        // Asset failed to load (offline, 404, …) — buildAvatarScene falls
+        // back to the next tier, so just stop waiting for this one.
+      });
+    return () => {
+      cancelled = true;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ready]);
+  return ready;
+}
 
 const DEFAULT_TARGET: [number, number, number] = [0, 0.3, 0];
 
@@ -31,27 +55,12 @@ export let exportedFrameCanvas: HTMLCanvasElement | null = null;
 
 function AvatarModel({ config, onStats }: { config: AvatarConfig; onStats: (b: BuiltAvatar) => void }) {
   const clockStart = useRef(performance.now());
-  const [baseBodyReady, setBaseBodyReady] = useState(!!getChibiBaseBody());
-
-  useEffect(() => {
-    if (baseBodyReady) return;
-    let cancelled = false;
-    preloadChibiBaseBody()
-      .then(() => {
-        if (!cancelled) setBaseBodyReady(true);
-      })
-      .catch(() => {
-        // Real asset failed to load (offline, 404, …) — buildAvatarScene
-        // already falls back to procedural primitives, so just stop waiting.
-      });
-    return () => {
-      cancelled = true;
-    };
-  }, [baseBodyReady]);
+  const baseBodyReady = useAssetReady(preloadChibiBaseBody, () => !!getChibiBaseBody());
+  const richBodyReady = useAssetReady(preloadRichBody, () => !!getRichBody());
 
   const structuralKey = useMemo(
-    () => JSON.stringify({ parts: config.parts, colors: config.colors, baseBodyReady }),
-    [config.parts, config.colors, baseBodyReady],
+    () => JSON.stringify({ parts: config.parts, colors: config.colors, baseBodyReady, richBodyReady }),
+    [config.parts, config.colors, baseBodyReady, richBodyReady],
   );
 
   const built = useMemo(() => {
@@ -185,11 +194,15 @@ export default function AvatarViewer() {
   const background = BACKGROUND_OPTIONS.find((b) => b.id === backgroundId) ?? BACKGROUND_OPTIONS[0];
 
   const [stats, setStats] = useState<DebugStats>({ triangles: 0, materials: 0, textures: 0, drawCalls: 0, fps: 0 });
-  const [loadingBaseBody, setLoadingBaseBody] = useState(!getChibiBaseBody());
+  // Gate the loading overlay on the rich body specifically (the best-quality
+  // tier) rather than every fallback tier — the base body / primitives keep
+  // preloading and rendering underneath regardless (see AvatarModel above).
+  const [loadingBaseBody, setLoadingBaseBody] = useState(!getRichBody());
 
   useEffect(() => {
     if (!loadingBaseBody) return;
-    preloadChibiBaseBody()
+    preloadChibiBaseBody().catch(() => {});
+    preloadRichBody()
       .then(() => setLoadingBaseBody(false))
       .catch(() => setLoadingBaseBody(false));
   }, [loadingBaseBody]);
