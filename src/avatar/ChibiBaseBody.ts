@@ -2,7 +2,10 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { buildHumanoidRig, type BoneName } from './HumanoidRig';
 
-const ASSET_URL = '/assets/avatar/body/chibi_base_2head_tpose.glb';
+// import.meta.env.BASE_URL respects vite.config.ts's `base` option, so this
+// resolves correctly whether the app is served from the domain root or a
+// sub-path (e.g. a claude.ai Artifact preview).
+const ASSET_URL = `${import.meta.env.BASE_URL}assets/avatar/body/chibi_base_2head_tpose.glb`;
 
 /**
  * The authored asset (public/assets/avatar/body/chibi_base_2head_tpose.glb)

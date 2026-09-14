@@ -3,7 +3,7 @@ import { Package, Camera, FileJson, Upload, Loader2 } from 'lucide-react';
 import { useAvatarStore } from '../store/avatarStore';
 import { exportAvatarToVrm, VrmExportError } from '../vrm/VRMExporter';
 import { validateAvatar } from '../avatar/AvatarValidator';
-import { downloadBlob, timestampedFilename } from '../utils/download';
+import { saveFile, timestampedFilename } from '../utils/download';
 import { captureCanvasScreenshot } from '../utils/screenshot';
 import { exportConfigAsJson, parseConfigFromJson } from '../utils/storage';
 import { exportedFrameCanvas } from './AvatarViewer';
@@ -43,7 +43,8 @@ export default function ExportPanel() {
         setStage(p.stage);
         setProgress(p.progress);
       });
-      downloadBlob(blob, timestampedFilename('ChibiAvatar', 'vrm'));
+      const result = await saveFile(blob, timestampedFilename('ChibiAvatar', 'vrm'));
+      if (result.status === 'unsupported') setError(result.message ?? '保存に失敗しました');
     } catch (e) {
       if (e instanceof VrmExportError) {
         setError(`VRMの生成に失敗しました: ${e.message}`);
@@ -62,15 +63,20 @@ export default function ExportPanel() {
     }
     try {
       const blob = await captureCanvasScreenshot(exportedFrameCanvas, screenshotFormat);
-      downloadBlob(blob, timestampedFilename('ChibiAvatar', 'png'));
+      const result = await saveFile(blob, timestampedFilename('ChibiAvatar', 'png'));
+      if (result.status === 'unsupported') setError(result.message ?? '保存に失敗しました');
     } catch (e) {
       setError(`画像の保存に失敗しました: ${e instanceof Error ? e.message : String(e)}`);
     }
   };
 
-  const handleExportJson = () => {
+  const handleExportJson = async () => {
     const json = exportConfigAsJson(config);
-    downloadBlob(new Blob([json], { type: 'application/json' }), timestampedFilename('ChibiAvatarConfig', 'json'));
+    const result = await saveFile(
+      new Blob([json], { type: 'application/json' }),
+      timestampedFilename('ChibiAvatarConfig', 'json'),
+    );
+    if (result.status === 'unsupported') setError(result.message ?? '保存に失敗しました');
   };
 
   const handleImportJsonClick = () => jsonFileInputRef.current?.click();
